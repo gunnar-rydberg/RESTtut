@@ -1,0 +1,40 @@
+<!-- snippets/templates/snippets/base.html -->
+{% load static %}
+<html>
+    <head>
+      <title>Snippets</title>
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+      <link rel="stylesheet" href="{% static "snippets/css/bootstrap.css" %}">
+    </head>
+    <body>
+      <div class=container-fluid>
+        <header>
+          <div class="nav-left">
+            <h1><a href="/">Snippets</a></h1>
+          </div>
+          <div class="nav-right">
+                <p>Place Link Here</p>
+          </div>
+        </header>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <p>Code snippets</p>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div id="snippet">
+
+                        <!-- INSERT API DATA HERE -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+      <script src = "{% static "snippets/js/jquery-1.10.2.js" %}" ></script>
+      <script src = "{% static "snippets/js/snippets.js" %}" ></script>
+      <script src = "{% static "snippets/js/bootstrap.min.js" %}" ></script>
+    </body>
+  </html>
