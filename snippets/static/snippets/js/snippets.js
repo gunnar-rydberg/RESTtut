@@ -1,12 +1,13 @@
 ( () => {
+    
     // Fetch JSON data and populate a list...
-
     $.getJSON("snippets", function(itemList) {
         $.each(itemList, function(i, item) {
             let $item = $('<div>').addClass("thumbnail col-md-3");
-            $.each(item, function(key,val) {
-                $item.append($("<p>" + key + ":" + val + "</p>"));
-            })
+
+            $item.append($('<h3>').text(item.title));
+            $item.append( $('<pre>').text(item.code));
+
             $("#snippet").append($item);
         })
 
